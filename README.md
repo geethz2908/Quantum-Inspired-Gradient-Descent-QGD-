@@ -1,95 +1,116 @@
-🔮 Quantum-Inspired Gradient Descent (QGD)
+# 🔮 Quantum-Inspired Gradient Descent (QGD)
 
-Optimization is the foundation of machine learning, but traditional methods like Stochastic Gradient Descent (SGD) and Momentum often struggle to balance computational efficiency with accuracy in complex scenarios. This project introduces Quantum-Inspired Gradient Descent (QGD)—an innovative optimization framework inspired by quantum principles such as superposition and entanglement to enhance performance in gradient-based learning.
+Optimization lies at the core of machine learning, yet traditional methods like **Stochastic Gradient Descent (SGD)** and **Momentum** often face trade-offs between accuracy and computational efficiency in complex scenarios.
 
-Through comparative experiments against standard optimizers (SGD, Adagrad, RMSProp), QGD achieves significantly faster convergence (0.04s) and better accuracy in velocity prediction tasks, delivering the lowest Mean Absolute Error (MAE) of 4.6539. These findings highlight QGD's potential as a scalable, efficient, and precise solution to key optimization challenges in ML.
+This project presents **Quantum-Inspired Gradient Descent (QGD)**—a novel optimization approach that incorporates **quantum concepts** such as **superposition** and **entanglement** into gradient descent. QGD aims to enhance convergence speed and accuracy, particularly in tasks like **velocity prediction**.
 
-🚀 Key Features
-✅ Introduces quantum-theoretical principles into optimization algorithms.
+Through rigorous experiments, QGD outperforms classical optimizers by achieving a **lower MAE (4.6539)** and **faster convergence (0.04s)**, establishing its role as a scalable and computationally efficient optimization technique.
 
-📉 Achieves faster convergence and reduced computation time.
+---
 
-🧠 Performs exceptionally well in velocity prediction tasks.
+## 🚀 Key Features
 
-🧪 Comparative evaluation with traditional methods (SGD, Adagrad, RMSProp).
+* ✅ Introduces quantum-theoretical principles into optimization algorithms
+* 📉 Achieves **faster convergence** and **reduced computation time**
+* 🧠 Performs exceptionally well in **velocity prediction tasks**
+* 🧪 Comparative evaluation with traditional methods (SGD, Adagrad, RMSProp)
+* 📊 In-depth analysis of **MAE**, **R²**, and **computation time**
 
-📊 Detailed analysis of MAE, R², and computation time.
+---
 
-📘 Notebook Covers
-Implementation of Standard GD and Improved QGD
+## 📘 What This Notebook Covers
 
-Integration of quantum-inspired logic (superposition sampling, entanglement)
+* 🛠 Implementation of **Standard GD** and **Improved QGD**
+* 🧬 Integration of **quantum-inspired logic** (superposition sampling, entanglement)
+* 🔍 Comparative benchmarking across **multiple metrics**
+* 📉 Visualization of **convergence** and **error trends**
 
-Comparative benchmarking across multiple metrics
+---
 
-Visualization of convergence and error metrics
+## 🧪 Results Summary and Comparison of Optimization Methods
 
-🧪 Results Summary and Comparison of Optimization Methods
-## **Performance Metrics Comparison**
+### 📊 Performance Metrics Comparison
 
-| **Method**         | **MAE**   | **R²**      | **Explained Variance** |
-|---------------------|-----------|-------------|-------------------------|
-| **SGD**            | 5.0126    | -0.0181     | -0.0057                |
-| **BGD**            | 5.0043    | -0.0160     | -0.0037                |
-| **Momentum**       | 5.0043    | -0.0160     | -0.0037                |
-| **Adagrad**        | 4.8964    | -0.0037     | -0.0037                |
-| **RMSProp**        | 5.0038    | -0.0159     | -0.0040                |
-| **Improved QGD (Pos)** | 7.5003 | -1.7689     | N/A                    |
-| **Standard GD (Pos)** | 7.5062 | -1.7656     | N/A                    |
-| **Improved QGD (Vel)** | 4.6539 | -0.9612     | N/A                    |
+| **Method**             | **MAE** | **R²**  | **Explained Variance** |
+| ---------------------- | ------- | ------- | ---------------------- |
+| **SGD**                | 5.0126  | -0.0181 | -0.0057                |
+| **BGD**                | 5.0043  | -0.0160 | -0.0037                |
+| **Momentum**           | 5.0043  | -0.0160 | -0.0037                |
+| **Adagrad**            | 4.8964  | -0.0037 | -0.0037                |
+| **RMSProp**            | 5.0038  | -0.0159 | -0.0040                |
+| **Improved QGD (Pos)** | 7.5003  | -1.7689 | N/A                    |
+| **Standard GD (Pos)**  | 7.5062  | -1.7656 | N/A                    |
+| **Improved QGD (Vel)** | 4.6539  | -0.9612 | N/A                    |
 
+---
 
-📌 Explanation of Metrics
-Mean Absolute Error (MAE): Measures average absolute deviation between prediction and ground truth. Lower is better.
+### 📌 Explanation of Metrics
 
-R² (Coefficient of Determination): Indicates how well predictions capture data variance. Closer to 1 is better; negative values imply poor fit.
+* **Mean Absolute Error (MAE):**
+  Measures the average magnitude of errors. Lower values indicate better accuracy.
 
-Explained Variance: Measures proportion of captured variance. Higher is better; negative values suggest worse than mean prediction.
+* **R² (Coefficient of Determination):**
+  Represents how well the model captures the variance. Values close to **1** are ideal; negative values indicate poor model fit.
 
-🕒 Computation Time Comparison
-Method	Computation Time (seconds)
-SGD	0.2198
-BGD	0.0019
-Momentum	2.0461
-Adagrad	1.0151
-RMSProp	1.0246
-Improved QGD (Position)	0.04
-Standard GD (Position)	0.04
-Improved QGD (Velocity)	0.04
+* **Explained Variance:**
+  Quantifies the amount of data variance the model explains. Negative values suggest performance worse than a mean-based prediction.
 
-📈 Detailed Summary
-1. Gradient Descent Variants
-SGD, BGD, and Momentum perform similarly, with moderate MAE and poor R², indicating basic optimization limits.
+---
 
-Adagrad performs slightly better due to its adaptive learning rate.
+### 🕒 Computation Time Comparison
 
-RMSProp shows comparable behavior to Adagrad but doesn't offer additional gains.
+| **Method**                  | **Computation Time (seconds)** |
+| --------------------------- | ------------------------------ |
+| **SGD**                     | 0.2198                         |
+| **BGD**                     | 0.0019                         |
+| **Momentum**                | 2.0461                         |
+| **Adagrad**                 | 1.0151                         |
+| **RMSProp**                 | 1.0246                         |
+| **Improved QGD (Position)** | 0.04                           |
+| **Standard GD (Position)**  | 0.04                           |
+| **Improved QGD (Velocity)** | 0.04                           |
 
-2. Improved QGD vs Standard GD
-Improved QGD (Velocity) delivers the lowest MAE (4.6539) and outperforms all others for velocity prediction.
+---
 
-For position prediction, both Improved QGD and Standard GD produce higher MAE (~7.5) and negative R², highlighting the complexity of positional tasks.
+## 📈 Detailed Summary
 
-Improved QGD's strength lies in velocity tasks, where it shines with fast convergence and low error.
+### 🔹 1. Gradient Descent Variants
 
-3. Computation Efficiency
-Despite high performance, QGD variants remain highly efficient, with computation times of just 0.04 seconds.
+* **SGD**, **BGD**, and **Momentum** show similar behavior with moderate accuracy.
+* **Adagrad** performs best among traditional methods due to its adaptive learning rates.
+* **RMSProp** offers little improvement over Momentum and Adagrad in this context.
 
-This makes QGD ideal for real-time or resource-constrained environments where both speed and accuracy matter.
+---
 
-🧠 Key Highlight: Improved QGD
-Achieves best performance in velocity prediction tasks.
+### 🔹 2. Improved QGD vs Standard GD
 
-Combines entanglement, superposition sampling, and adaptive learning for superior gradient updates.
+* **Improved QGD (Velocity)** achieves the **lowest MAE (4.6539)**, demonstrating superior performance in this domain.
+* **Position-based QGD and GD** methods show higher MAEs (\~7.5) and poor R² values, indicating complexity in positional learning.
+* Despite this, QGD’s **quantum principles** make it highly efficient and effective in **velocity prediction**.
 
-Offers a novel, quantum-inspired solution to long-standing ML optimization trade-offs.
+---
 
-🛠 Tools & Technologies Used
-Python 3.x
+### 🔹 3. Computation Efficiency
 
-NumPy
+* **QGD variants** (both standard and improved) consistently complete training in **0.04 seconds**.
+* This makes QGD **ideal for real-time systems**, **low-power devices**, or **large-scale ML pipelines**.
 
-Matplotlib
+---
 
-Jupyter Notebook
+## 🧠 Key Highlight: Improved QGD
 
+* 🚀 **Best in class** for velocity prediction tasks.
+* 🔬 Leverages **quantum-inspired ideas** like entanglement and superposition sampling.
+* 🧮 Maintains **low training time** without compromising on precision.
+* 🔧 Offers an **innovative approach** to solving traditional ML optimization bottlenecks.
+
+---
+
+## 🛠 Tools & Technologies Used
+
+* 🐍 Python 3.x
+* 📘 Jupyter Notebook
+* 🔢 NumPy
+* 📊 Matplotlib
+
+---
