@@ -1,0 +1,1 @@
+# Quantum-Inspired-Gradient-Descent-QGD-
